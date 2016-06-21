@@ -37,6 +37,13 @@ namespace ValidatorPatternExample.Services
             AddItemValidatorFactory.ItemRepository = itemRepository;
             AddItemValidatorFactory.ItemToValidate = item;
             return AddItemValidatorFactory.Create();
+
+            //return ValidatorFactory.Create(new ValidatorConfiguration()
+            //{
+            //    ValidatorType = ValidatorTypeEnum.AddItem,
+            //    ItemRepository = itemRepository,
+            //    ItemToValidate = item
+            //});
         }
 
         private void HandleFailedValidation(IValidator validator)
@@ -68,6 +75,13 @@ namespace ValidatorPatternExample.Services
             UpdateItemsValidatorFactory.ItemRepository = itemRepository;
             UpdateItemsValidatorFactory.ItemsToValidate = items;
             return UpdateItemsValidatorFactory.Create();
+
+            //return ValidatorFactory.Create(new ValidatorConfiguration()
+            //{
+            //    ValidatorType = ValidatorTypeEnum.UpdateItems,
+            //    ItemRepository = itemRepository,
+            //    ItemsToValidate = items,
+            //});
         }
     }
 }
