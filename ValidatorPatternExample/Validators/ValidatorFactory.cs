@@ -23,7 +23,7 @@ namespace ValidatorPatternExample.Validators
                 return GetValidator(validatorConfiguration);
             }
 
-            throw new Exception("AddItemValidatorFactory requires either an instance of IValidator or IItemRepository and Item");
+            throw new Exception("ValidatorFactory requires either an instance of IValidator or ValidatorConfiguration");
         }
 
         private static IValidator GetValidator(ValidatorConfiguration validatorConfiguration)
